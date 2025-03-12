@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Página de login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+    }
+    #formulario{
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        width: 500px;
+        background-color: aqua;
+        border-radius: 10px;
+    }
+
+    #sucesso{
+        display: none;
+    }
+</style>
+<body>
+    <form id="formulario">
+        <h2>Faça seu ligin</h2>
+        <input id="email" type="email" placeholder="Digite email">
+        <input id="senha" placeholder="Digte senha" type="password">
+        <input type ="submit" value="login" id="login">
+
+    </form>
+
+    <div id="sucesso">
+        login realizado com sucesso!
+    </div>
+
+    <script>
+        document.getElementById("login").addEventListener("click",
+         function (event){
+            event.preventDefault();
+            document.getElementById("sucesso").style.display = "block"
+
+        })
+    </script>
+    
+    
+</body>
+</html>
